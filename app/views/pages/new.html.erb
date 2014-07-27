@@ -1,0 +1,24 @@
+
+
+<%= form_tag( "/clear_my_code" , {:remote => true , :method => :post , :class => "text-center form-group form-inline" } ) do %>
+  <%= text_area_tag "code", nil , :style =>"width: 80%; height: 400px;" %>
+
+  <div class="form-group">
+  <%= label_tag 'java' %> 
+  <%= radio_button_tag 'language', 'java' , true%> 
+
+
+  <%= label_tag 'C' %> 
+  <%= radio_button_tag 'language', 'c'%> 
+
+  <%= label_tag 'C++' %> 
+  <%= radio_button_tag 'language', 'cpp'%> 
+
+  <%= label_tag 'Ruby' %> 
+  <%= radio_button_tag 'language', 'ruby' %> 
+  </div>
+
+  <%= submit_tag "STRIP :)" , :class => 'btn btn-success'%>
+<% end %>
+
+<div id ="cleared_code"></div>

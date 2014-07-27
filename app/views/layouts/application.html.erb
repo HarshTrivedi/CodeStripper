@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code Cleaner</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+	<%= nav_bar :fixed => :top do %>
+	    <h2 class='text-center'>Code Cleaner  
+	    <small>Strip the comments and blank lines from your code. Enter code to be cleared in the box.</small>
+		   </h2>
+	<%end%>
+	<div class="container"><%= yield %></div>
+	<%= nav_bar :fixed => :bottom do %>
+	   	<p class='navbar-text'>Contact <%=mail_to('harshjtrivedi94@gmail.com', 'Harsh Trivedi' , :subject => 'About Code Cleaner tool')%> if any problem.</p>
+	<%end%>
+
+
+
+</body>
+</html>
