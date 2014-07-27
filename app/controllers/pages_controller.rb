@@ -9,8 +9,8 @@ class PagesController < ApplicationController
 		code_string = params[:code]
 		language = params[:language]
 		@cleared_code = clear_code(language , code_string)
-		render :js => "$('#cleared_code').html( #{code} ) ; document.body.style.paddingBottom = \"150px\"; document.body.style.background = '#FAFFFF' ; document.body.style.paddingTop = \"100px\";" 
-
+		@pretty_code = CodeRay.scan(@cleared_code, language).page.inspect
+		render :js => "$('#cleared_code').html(" + @pretty_code  + ");" + "document.body.style.paddingBottom = '150px';" + "document.body.style.paddingBottom = '150px';" + "document.body.style.background = '#FAFFFF' ;" + "document.body.style.paddingTop = '100px';"
 	end
 
 end
