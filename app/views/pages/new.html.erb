@@ -45,7 +45,19 @@
 
   </div>
   <br/> 
-  <%= submit_tag "STRIP :)" , :class => 'btn btn-success'%>
+  <div onclick="spin_icon_start(event, this)">
+    <%= submit_tag "STRIP :)" , :class => 'btn btn-success' %>
+    <i class="fa fa-refresh fa-1x" id='spin_icon'></i> 
+  </div>   
+
+
+
 <% end %>
 
 <div id ="cleared_code"></div>
+
+
+<script>
+  function spin_icon_start(event){$('#spin_icon').addClass('fa-spin');};
+  function spin_icon_stop(event){$('#spin_icon').removeClass('fa-spin');}; 
+</script>
