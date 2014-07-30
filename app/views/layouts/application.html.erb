@@ -11,12 +11,12 @@
 
 	<%= nav_bar :fixed => :top do %>
 	    <h2 class='text-center'>Code Cleaner  
-	    <small>Strip the comments and blank lines from your code. Enter code to be cleared in the box.</small>
+	    <small>Strip out the comments and blank lines from your code.</small>
 		   </h2>
 	<%end%>
 	<div class="container"><%= yield %></div>
 	<%= nav_bar :fixed => :bottom do %>
-	   	<p class='navbar-text'>Contact <%=mail_to('harshjtrivedi94@gmail.com', 'me' , :subject => 'About Code Cleaner tool')%> if any problem. The App is open-sourced <%= link_to "Here" , 'https://github.com/HarshTrivedi/CodeStripper', :target => "_blank" %> </p>
+	   	<p class='navbar-text text-right'>Made with love by <%=mail_to('harshjtrivedi94@gmail.com', 'Harsh Trivedi' , :subject => 'About Code Cleaner tool')%>. The App is open-sourced <%= link_to "Here" , 'https://github.com/HarshTrivedi/CodeStripper', :target => "_blank" %> </p>
 	<%end%>
 
 </body>

@@ -1,48 +1,50 @@
 
 
 <%= form_tag( "/clear_my_code" , {:remote => true , :method => :post , :class => "text-center form-group form-inline" } ) do %>
-  <%= text_area_tag "code", nil , :style =>"width: 80%; height: 400px;" %>
 
+  <h4><strong>Input Code</strong></h4>
+  <%= text_area_tag "code", nil , :style =>"width: 80%; height: 400px;" , :placeholder => "Paste Your Code Here"%>
+  <br/>  <br/> 
   <div class="form-group">
-  <%= label_tag 'java' %> 
+  <b>java</b> 
   <%= radio_button_tag 'language', 'java' , true%> 
 
 
-  <%= label_tag 'C' %> 
+  <b>C</b> 
   <%= radio_button_tag 'language', 'c'%> 
 
-  <%= label_tag 'C++' %> 
+  <b>C++</b> 
   <%= radio_button_tag 'language', 'cpp'%> 
 
-  <%= label_tag 'JavaScript' %> 
+  <b>JavaScript</b> 
   <%= radio_button_tag 'language', 'java_script'%> 
 
-  <%= label_tag 'Scala' %> 
+  <b>Scala</b> 
   <%= radio_button_tag 'language', 'scala'%> 
 
-  <%= label_tag 'Go' %> 
+  <b>Go</b> 
   <%= radio_button_tag 'language', 'go'%> 
 
-  <%= label_tag 'Clojure' %> 
+  <b>Clojure</b> 
   <%= radio_button_tag 'language', 'clojure'%> 
 
-  <%= label_tag 'Ruby' %> 
+  <b>Ruby</b> 
   <%= radio_button_tag 'language', 'ruby' %> 
 
-  <%= label_tag 'Php' %> 
+  <b>Php</b> 
   <%= radio_button_tag 'language', 'php' %> 
 
-  <%= label_tag 'Html' %> 
+  <b>Html</b> 
   <%= radio_button_tag 'language', 'html' %> 
 
-  <%= label_tag 'Css' %> 
+  <b>Css</b> 
   <%= radio_button_tag 'language', 'css' %> 
 
-  <%= label_tag 'Python' %> 
+  <b>Python</b> 
   <%= radio_button_tag 'language', 'python' %> 
 
   </div>
-
+  <br/> 
   <%= submit_tag "STRIP :)" , :class => 'btn btn-success'%>
 <% end %>
 
