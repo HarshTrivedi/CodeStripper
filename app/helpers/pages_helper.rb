@@ -27,7 +27,7 @@ module PagesHelper
 				ap line
 				puts (/#/).match(line).inspect
 				puts (/["'].*#.*["']/).match(line).inspect
-				if (not (/#/).match(line).nil?) and ((/["'].*#.*["']/).match(line).nil? )
+				if (not (/#/).match(line).nil?) and ((/(["`]).*#.*(\1)/).match(line).nil? )
 					line = line.gsub(/(#.*)/ , "")
 				end
 		        complete_string = complete_string + line if not line.strip.chomp.empty?
