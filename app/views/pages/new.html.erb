@@ -1,46 +1,49 @@
 
+<h2 class="text-center">
+  <small class="text-center" style="color: #173B0B;font-family: 'Vollkorn', Georgia, Times, serif;">Ever ended up adding too many useless comments and blank lines while developing and debugging your app?<p class="text-center" style="color: #173B0B;font-family: 'Vollkorn', Georgia, Times, serif;"> If yes , this simple app might make your life a little bit easier! :)</p></small>
+</h2>
 
 <%= form_tag( "/clear_my_code" , {:remote => true , :method => :post , :class => "text-center form-group form-inline" } ) do %>
 
-  <h4><strong>Input Code</strong></h4>
+  <h4 style="color: #5F4C0B;"><strong>Input Code</strong></h4>
   <%= text_area_tag "code", nil , :style =>"width: 80%; height: 400px;" , :placeholder => "Paste Your Code Here"%>
   <br/>  <br/> 
   <div class="form-group">
-  <b>java</b> 
+  <b style="color: #5F4C0B;">java</b> 
   <%= radio_button_tag 'language', 'java' , true%> 
 
 
-  <b>C</b> 
+  <b style="color: #5F4C0B;">C</b> 
   <%= radio_button_tag 'language', 'c'%> 
 
-  <b>C++</b> 
+  <b style="color: #5F4C0B;">C++</b> 
   <%= radio_button_tag 'language', 'cpp'%> 
 
-  <b>JavaScript</b> 
+  <b style="color: #5F4C0B;">JavaScript</b> 
   <%= radio_button_tag 'language', 'java_script'%> 
 
-  <b>Scala</b> 
+  <b style="color: #5F4C0B;">Scala</b> 
   <%= radio_button_tag 'language', 'scala'%> 
 
-  <b>Go</b> 
+  <b style="color: #5F4C0B;">Go</b> 
   <%= radio_button_tag 'language', 'go'%> 
 
-  <b>Clojure</b> 
+  <b style="color: #5F4C0B;">Clojure</b> 
   <%= radio_button_tag 'language', 'clojure'%> 
 
-  <b>Ruby</b> 
+  <b style="color: #5F4C0B;">Ruby</b> 
   <%= radio_button_tag 'language', 'ruby' %> 
 
-  <b>Php</b> 
+  <b style="color: #5F4C0B;">Php</b> 
   <%= radio_button_tag 'language', 'php' %> 
 
-  <b>Html</b> 
+  <b style="color: #5F4C0B;">Html</b> 
   <%= radio_button_tag 'language', 'html' %> 
 
-  <b>Css</b> 
+  <b style="color: #5F4C0B;">Css</b> 
   <%= radio_button_tag 'language', 'css' %> 
 
-  <b>Python</b> 
+  <b style="color: #5F4C0B;">Python</b> 
   <%= radio_button_tag 'language', 'python' %> 
 
   </div>

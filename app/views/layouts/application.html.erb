@@ -6,12 +6,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="google-site-verification" content="r9IPoLHgMSsUvjWTr7ySyNc3n1rI0ZONGJxQwZ58nXw" />
+  <link href="http://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Cardo" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 	<%= nav_bar :fixed => :top do %>
-	    <h2 class='text-center'>Code Cleaner  
-	    <small>Strip out the comments and blank lines from your code.</small>
+	    <h2 class='text-center' style="color: #431A0D;font-family: 'Dancing Script', Georgia, Times, serif;">CodeStrippin'  
+	    <small style="color: #5F4C0B;font-family: 'Cardo', Georgia, Times, serif;">Strip out the comments and blank lines from your code.</small>
 		   </h2>
 	<%end%>
 	<div class="container"><%= yield %></div>
