@@ -26,8 +26,8 @@ module PagesHelper
 		code_string.split(/[\r]/).each do |line|
 				ap line
 				puts (/#/).match(line).inspect
-				puts (/["'].*#.*["']/).match(line).inspect
-				if (not (/#/).match(line).nil?) and ((/(["`]).*#.*(\1)/).match(line).nil? )
+				temp_line = line.gsub(/("[^"]*#[^"]*")|(`[^`]*#[^`]*`)|('[^']*#[^']*')/, "")
+				if (not (/#/).match(temp_line).nil? )
 					line = line.gsub(/(#.*)/ , "")
 				end
 		        complete_string = complete_string + line if not line.strip.chomp.empty?
